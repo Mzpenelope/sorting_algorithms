@@ -40,4 +40,4 @@ Choosing the right sorting algorithm depends on the specific use case and the ch
 Sorting algorithms play a vital role in computer science and software engineering, enabling efficient data manipulation and enhancing the performance of a wide range of applications. The choice of sorting algorithm should be guided by the specific requirements of the task at hand, and a thorough understanding of various sorting techniques can empower developers to make informed decisions for optimal results.
 
 ## Authors
-By Phillipa Aidoo & Christabel Aidoo 
+By Phillipa Aidoo & Christabel Aidoo
