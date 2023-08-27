@@ -1,18 +1,18 @@
 #include "sort.h"
-
 void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
 		size_t back);
 void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back);
 void merge_sort(int *array, size_t size);
 
 /**
- * merge_subarr - Sort a subarray of integers.
- * @subarr: A subarray of an array of integers to sort.
- * @buff: A buffer to store the sorted subarray.
- * @front: The front index of the array.
- * @mid: The middle index of the array.
- * @back: The back index of the array.
+ * merge_subarr - function sort integers
+ * @subarr: sub array of array of ints
+ * @buff: buffer to store subarray
+ * @front: front index of array
+ * @mid: middle index of array
+ * @back: back index of array
  */
+
 void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
 		size_t back)
 {
@@ -38,12 +38,13 @@ void merge_subarr(int *subarr, int *buff, size_t front, size_t mid,
 }
 
 /**
- * merge_sort_recursive - Implement the merge sort algorithm through recursion.
- * @subarr: A subarray of an array of integers to sort.
- * @buff: A buffer to store the sorted result.
- * @front: The front index of the subarray.
- * @back: The back index of the subarray.
+ * merge_sort_recursive - function implement the merge
+ * @subarr: sub array of array of ints
+ * @buff: buffer to store sorted result
+ * @front: front index of subarray
+ * @back: back index of subarray
  */
+
 void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 {
 	size_t mid;
@@ -58,13 +59,12 @@ void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 }
 
 /**
- * merge_sort - Sort an array of integers in ascending
- *              order using the merge sort algorithm.
- * @array: An array of integers.
- * @size: The size of the array.
- *
- * Description: Implements the top-down merge sort algorithm.
+ * merge_sort - sorts array of integers in ascending order
+ * @array: array of integers
+ * @size: size of array
+ * Description: function uses top-down merge sort
  */
+
 void merge_sort(int *array, size_t size)
 {
 	int *buff;
