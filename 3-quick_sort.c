@@ -1,16 +1,16 @@
 #include "sort.h"
 
-void swap_ints(int *a, int *b);
+void swap_element(int *a, int *b);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * swap_element - func swaps dual ints
+ * @a: The 1st integer
+ * @b: The 2nd integer
  */
-void swap_ints(int *a, int *b)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
@@ -20,15 +20,14 @@ void swap_ints(int *a, int *b)
 }
 
 /**
- * lomuto_partition - Order a subset of an array of integers according to
- *                    the lomuto partition scheme (last element as pivot).
- * @array: The array of integers.
- * @size: The size of the array.
- * @left: The starting index of the subset to order.
- * @right: The ending index of the subset to order.
- *
+ * lomuto_partition - reorders a subset of an array of integers.
+ * @array: array of integers.
+ * @size: size of the array.
+ * @left: starting index of subset
+ * @right: ending index o fsubset
  * Return: The final partition index.
  */
+
 int lomuto_partition(int *array, size_t size, int left, int right)
 {
 	int *pivot, above, below;
@@ -40,7 +39,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 		{
 			if (above < below)
 			{
-				swap_ints(array + below, array + above);
+				swap_element(array + below, array + above);
 				print_array(array, size);
 			}
 			above++;
@@ -49,7 +48,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 
 	if (array[above] > *pivot)
 	{
-		swap_ints(array + above, pivot);
+		swap_element(array + above, pivot);
 		print_array(array, size);
 	}
 
@@ -57,13 +56,12 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 }
 
 /**
- * lomuto_sort - Implement the quicksort algorithm through recursion.
- * @array: An array of integers to sort.
- * @size: The size of the array.
- * @left: The starting index of the array partition to order.
- * @right: The ending index of the array partition to order.
- *
- * Description: Uses the Lomuto partition scheme.
+ * lomuto_sort - uses quicksort algor
+ * @array: An array of integer
+ * @size: size of the array.
+ * @left: starting index of array
+ * @right: ending index of array par
+ * Description: Uses Lomuto partition scheme.
  */
 void lomuto_sort(int *array, size_t size, int left, int right)
 {
@@ -78,13 +76,10 @@ void lomuto_sort(int *array, size_t size, int left, int right)
 }
 
 /**
- * quick_sort - Sort an array of integers in ascending
- *              order using the quicksort algorithm.
- * @array: An array of integers.
- * @size: The size of the array.
- *
- * Description: Uses the Lomuto partition scheme. Prints
- *              the array after each swap of two elements.
+ * quick_sort - func sorts array of integers in ascending
+ * @array: array of integers.
+ * @size: size of array.
+ * Description: Prints array after swap
  */
 void quick_sort(int *array, size_t size)
 {

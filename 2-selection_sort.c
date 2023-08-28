@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * swap_element - func swap two integers in an array.
+ * @a: The first integer
+ * @b: The second integer
  */
-void swap_ints(int *a, int *b)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
@@ -15,13 +15,12 @@ void swap_ints(int *a, int *b)
 }
 
 /**
- * selection_sort - Sort an array of integers in ascending order
- *                  using the selection sort algorithm.
- * @array: An array of integers.
- * @size: The size of the array.
- *
- * Description: Prints the array after each swap.
+ * selection_sort - func dort an array of integers in ascending order
+ * @array: array of integers.
+ * @size: size of the array.
+ * Description: Prints array after swap
  */
+
 void selection_sort(int *array, size_t size)
 {
 	int *min;
@@ -38,7 +37,7 @@ void selection_sort(int *array, size_t size)
 
 		if ((array + i) != min)
 		{
-			swap_ints(array + i, min);
+			swap_element(array + i, min);
 			print_array(array, size);
 		}
 	}

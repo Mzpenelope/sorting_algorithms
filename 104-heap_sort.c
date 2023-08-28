@@ -1,14 +1,14 @@
 #include "sort.h"
-void swap_ints(int *a, int *b);
+void swap_element(int *a, int *b);
 void max_heapify(int *array, size_t size, size_t base, size_t root);
 void heap_sort(int *array, size_t size);
 /**
- * swap_ints - function swaps two ints
+ * swap_element - func swaps two ints
  * @a: 1st integer
  * @b: 2nd integer
  */
 
-void swap_ints(int *a, int *b)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
@@ -39,7 +39,7 @@ void max_heapify(int *array, size_t size, size_t base, size_t root)
 
 	if (large != root)
 	{
-		swap_ints(array + root, array + large);
+		swap_element(array + root, array + large);
 		print_array(array, size);
 		max_heapify(array, size, base, large);
 	}
@@ -64,7 +64,7 @@ void heap_sort(int *array, size_t size)
 
 	for (i = size - 1; i > 0; i--)
 	{
-		swap_ints(array, array + i);
+		swap_element(array, array + i);
 		print_array(array, size);
 		max_heapify(array, size, i, 0);
 	}

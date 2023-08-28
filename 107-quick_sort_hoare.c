@@ -1,16 +1,16 @@
 #include "sort.h"
-void swap_ints(int *a, int *b);
+void swap_element(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);
 void hoare_sort(int *array, size_t size, int left, int right);
 void quick_sort_hoare(int *array, size_t size);
 
 /**
- * swap_ints - swap integers in array
+ * swap_element - swap integers in array
  * @a: fir integer
  * @b: 2nd integer
  */
 
-void swap_ints(int *a, int *b)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
@@ -44,7 +44,7 @@ int hoare_partition(int *array, size_t size, int left, int right)
 
 		if (above < below)
 		{
-			swap_ints(array + above, array + below);
+			swap_element(array + above, array + below);
 			print_array(array, size);
 		}
 	}
@@ -73,13 +73,10 @@ void hoare_sort(int *array, size_t size, int left, int right)
 }
 
 /**
- * quick_sort_hoare - Sort an array of integers in ascending
- *                    order using the quicksort algorithm.
- * @array: An array of integers.
- * @size: The size of the array.
- *
- * Description: Uses the Hoare partition scheme. Prints
- * the array after each swap of two elements.
+ * quick_sort_hoare - fuc sorts array of ints in ascend order
+ * @array: array of integers
+ * @size: size of the array.
+ * Description: Prints array after swap
  */
 void quick_sort_hoare(int *array, size_t size)
 {

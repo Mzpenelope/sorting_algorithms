@@ -1,12 +1,12 @@
 #include "sort.h"
 
 /**
- * swap_ints - function swaps two ints
+ * swap_element - func swaps two ints
  * @a: 1st integer
  * @b: 2nd integer
  */
 
-void swap_ints(int *a, int *b)
+void swap_element(int *a, int *b)
 {
 	int tmp;
 
@@ -39,7 +39,7 @@ void shell_sort(int *array, size_t size)
 			j = i;
 			while (j >= gap && array[j - gap] > array[j])
 			{
-				swap_ints(array + j, array + (j - gap));
+				swap_element(array + j, array + (j - gap));
 				j -= gap;
 			}
 		}
